@@ -17,53 +17,96 @@
 
         header {
             background-color: #B59410;
-            /* Gold Header Background */
             text-align: center;
             padding: 20px;
             height: 5n;
-            /* Set the height to 1 inch */
             overflow: hidden;
         }
 
         center {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin-left: 1ch;
+            margin-right: 1ch;
             text-align: center;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
         }
 
         a {
             color: #f1f1ed;
-            /* Gold Link Color */
             margin: 0 10px;
             text-decoration: none;
             font-size: 22px;
         }
 
         h1 {
-            color: #f0f0ed;
-            /* Gold Heading Color */
+            color: whitesmoke;
             font-family: cursive;
             font-size: larger;
             font-weight: 200;
-            font-size: 50px;
+            font-size: 60px;
+            margin-bottom: 0px;
+            margin-top: 0px;
 
         }
 
         p {
             color: #e4e4e2;
-            /* Gold Text Color for <p> elements */
+            margin: 20px;
+            font-size: large;
+        }
+
+        h2 {
+            color: whitesmoke;
+            font-size: 28px;
+            font-style: italic;
+            margin-top: 0px;
+        }
+
+        h3 {
+            color: black;
         }
 
         .circle-img {
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
+            width: 250px;
+            height: 250px;
             object-fit: cover;
             border: 4px solid #fff;
-            /* White Border */
             margin: 0 auto;
             display: block;
+        }
+
+        .container {
+            display: flex;
+            padding: 13px;
+        }
+
+        .textbox {
+            flex: 1;
+            background-color: whitesmoke;
+            padding: 10px;
+            margin: 5px;
+            border: 3px solid #B59410;
+            height: fit-content
+        }
+
+        #fun-fact-button {
+            background-color: #B59410;
+            color: white;
+            border: white;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: larger;
+            margin-top: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #fact-prompt {
+            font-size: x-large
         }
     </style>
 </head>
@@ -76,22 +119,62 @@
             <a href="projects.html">My projects</a>
         </div>
     </header>
-<br>
+    <br>
     <center>
-            <img class="circle-img" src="images/IMG_9021 3.HEIC">
-        <div>
-            <h1>
-                Abigail Manga
-            </h1>
-        </div>
+        <img src="images/photo.jpg">
+        <h1>
+            Abigail Manga
+        </h1>
+        <h2>
+            Dreamer. Leader. Change-Maker.
+        </h2>
         <p>
-            Hi, my name is Abigail Manga and welcome to my website :)
-        </p>
-        <p>
-            I am a third-year information systems student at UMD.
+            My name is Abigail Manga, and I am a third-year Information Systems major at the University of Maryland
+            College Park. I chose information systems to expand my knowledge of how to leverage technology to solve
+            complex problems. I am currently in the QUEST Honors Program at UMD, which focuses on problem-solving and
+            completing experiential coursework within teams. Furthermore, I serve as the President of UMD's chapter of
+            the National Association of Black Accountants, where I am responsible for the overall operations of the
+            organization and play a key role in building community within the business school and helping students
+            develop professionally.
         </p>
     </center>
-
+    <div class="container">
+        <div class="textbox">
+            <h3>Coursework</h3>
+            <p>My coursework.</p>
+        </div>
+        <div class="textbox">
+            <h3>Hobbies</h3>
+            <p>My hobbies</p>
+        </div>
+        <div class="textbox">
+            <h3>Career</h3>
+            <p>TMy career goals</p>
+        </div>
+    </div>
+    <center>
+        <div id="fun-fact">
+            <button id="fun-fact-button">Random Fun Fact Abou Me</button>
+            <p id="fact-prompt"></p>
+        </div>
+    </center>
+    <script>
+        const allfacts = [
+            "I have three sisters",
+            "I can speak french",
+            "My favorite color is green",
+            "My birthday is April 29th",
+            "I worked at Deloitte this summer",
+            "I just learned how to code this semester",
+            "I'm an RA",
+        ];
+        function funfactgenerator() {
+            const randomIndex = Math.floor(Math.random() * allfacts.length);
+            const funfacts = allfacts[randomIndex];
+            document.getElementById("fact-prompt").textContent = funfacts;
+        }
+        document.getElementById("fun-fact-button").addEventListener("click", funfactgenerator);
+    </script>
 </body>
 
 </html>
