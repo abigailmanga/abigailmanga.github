@@ -45,37 +45,42 @@
         h1 {
             color: whitesmoke;
             font-family: cursive;
-            font-size: larger;
-            font-weight: 200;
-            font-size: 60px;
-            margin-bottom: 0px;
-            margin-top: 0px;
-
+            font-weight: 160;
+            font-size: 48px;
+            margin-bottom: 3px;
+            margin-top: 3px
         }
 
         p {
             color: #e4e4e2;
             margin: 20px;
-            font-size: large;
+            font-size: 19px;
         }
 
         h2 {
             color: whitesmoke;
-            font-size: 28px;
+            font-size: 25px;
             font-style: italic;
             margin-top: 0px;
         }
 
         h3 {
             color: black;
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        ul{
+            color: black;
+            font-size: 19px;
         }
 
         .circle-img {
             border-radius: 50%;
-            width: 250px;
-            height: 250px;
+            width: 200px;
+            height: 200px;
             object-fit: cover;
-            border: 4px solid #fff;
+            border: 1px solid white;
             margin: 0 auto;
             display: block;
         }
@@ -91,7 +96,7 @@
             padding: 10px;
             margin: 5px;
             border: 3px solid #B59410;
-            height: fit-content
+            height:auto
         }
 
         #fun-fact-button {
@@ -121,12 +126,12 @@
     </header>
     <br>
     <center>
-        <img src="images/photo.jpg">
+        <img src="images/photo.jpg" class='circle-img'>
         <h1>
             Abigail Manga
         </h1>
         <h2>
-            Dreamer. Leader. Change-Maker.
+            Dreamer.  Leader.  Change-Maker.
         </h2>
         <p>
             My name is Abigail Manga, and I am a third-year Information Systems major at the University of Maryland
@@ -140,21 +145,41 @@
     </center>
     <div class="container">
         <div class="textbox">
-            <h3>Coursework</h3>
-            <p>My coursework.</p>
+            <h3>Experience & Campus Involvement</h3>
+            <p>
+                <ul>
+                    <li>Deloitte Risk & Financial Advisory Intern</li>
+                    <li>Resident Assistant</li>
+                    <li>NABA President</li>
+                    <li>SULC Council Member</li>
+                </ul>
+            </p>
         </div>
         <div class="textbox">
-            <h3>Hobbies</h3>
-            <p>My hobbies</p>
+            <h3>Skills</h3>
+            <p>
+                <ul>
+                    <li>Excel</li>
+                    <li>Python</li>
+                    <li>Problem Solving</li>
+                    <li>Graphic Design</li>
+                </ul>
+            </p>
         </div>
         <div class="textbox">
-            <h3>Career</h3>
-            <p>TMy career goals</p>
+            <h3>Contact Information</h3>
+            <center>
+             <p style="color: black;">Email: abigail.manga03@gmail.com</p>
+             <p style="color: black;">Number: 202-322-3701</p>
+             <u style="color: black;">
+                <a href="https://www.linkedin.com/in/abigailmanga" style="color: black; font-size: 19px;"">LinkedIn </a>
+             </u>
+            </center>
         </div>
     </div>
     <center>
         <div id="fun-fact">
-            <button id="fun-fact-button">Random Fun Fact Abou Me</button>
+            <button id="fun-fact-button">Click Button for Random Fun Fact Abou Me!</button>
             <p id="fact-prompt"></p>
         </div>
     </center>
@@ -164,9 +189,9 @@
             "I can speak french",
             "My favorite color is green",
             "My birthday is April 29th",
-            "I worked at Deloitte this summer",
+            "I've seen Hamilton 5 times",
             "I just learned how to code this semester",
-            "I'm an RA",
+            "I prefer Dunkin Donuts over Krispy Kreme",
         ];
         function funfactgenerator() {
             const randomIndex = Math.floor(Math.random() * allfacts.length);
